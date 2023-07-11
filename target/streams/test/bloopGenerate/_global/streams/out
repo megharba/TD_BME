@@ -1,0 +1,4 @@
+[debug] [td_bme-test] Classpath dependencies List()
+[debug] [td_bme-test] Dependencies from configurations List(td_bme)
+[debug] Bloop wrote the configuration of project 'td_bme-test' to 'C:\TD_BME\.bloop\td_bme-test.json'
+[success] Generated .bloop\td_bme-test.json

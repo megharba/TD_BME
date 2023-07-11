@@ -1,0 +1,302 @@
+2023.07.11 12:16:44 INFO  Started: Metals version 0.11.12 in workspace 'C:\Users\Bruno Megharba\Downloads\td_a_rendre' for client Visual Studio Code 1.80.0.
+juil. 11, 2023 12:16:44 PM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.16.3 by Redgate
+juil. 11, 2023 12:16:44 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+juil. 11, 2023 12:16:44 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+juil. 11, 2023 12:16:45 PM org.flywaydb.core.internal.database.base.BaseDatabaseType createDatabase
+INFO: Database: jdbc:h2:file:C:\Users\Bruno Megharba\Downloads\td_a_rendre\.metals\metals (H2 2.1)
+juil. 11, 2023 12:16:45 PM org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory allAppliedMigrations
+INFO: Schema history table "PUBLIC"."flyway_schema_history" does not exist yet
+juil. 11, 2023 12:16:45 PM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.030s)
+juil. 11, 2023 12:16:45 PM org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory create
+INFO: Creating Schema History table "PUBLIC"."flyway_schema_history" ...
+juil. 11, 2023 12:16:45 PM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": << Empty Schema >>
+juil. 11, 2023 12:16:45 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "1 - Create tables"
+juil. 11, 2023 12:16:45 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "2 - Server discovery"
+juil. 11, 2023 12:16:45 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "3 - Jar symbols"
+juil. 11, 2023 12:16:45 PM org.flywaydb.core.internal.command.DbMigrate doMigrateGroup
+INFO: Migrating schema "PUBLIC" to version "4 - Fingerprints"
+juil. 11, 2023 12:16:45 PM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Successfully applied 4 migrations to schema "PUBLIC", now at version v4 (execution time 00:00.060s)
+2023.07.11 12:16:45 INFO  time: initialize in 0.82s
+2023.07.11 12:16:47 WARN  Build server is not auto-connectable.
+2023.07.11 12:17:57 WARN  no build target for: C:\Users\Bruno Megharba\Downloads\td_a_rendre\src\main\scala\Main.scala
+2023.07.11 12:18:02 INFO  no build target found for C:\Users\Bruno Megharba\Downloads\td_a_rendre\src\main\scala\Main.scala. Using presentation compiler with project's scala-library version: 3.2.2
+2023.07.11 12:18:04 INFO  time: code lens generation in 6.77s
+2023.07.11 12:18:04 INFO  time: code lens generation in 2.09s
+juil. 11, 2023 12:18:10 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\Bruno Megharba\Downloads\td_a_rendre\src\main\scala\Main.scala
+java.util.concurrent.CompletionException: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\Bruno Megharba\Downloads\td_a_rendre\src\main\scala\Main.scala
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:743)
+	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:731)
+	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2112)
+	at scala.concurrent.java8.FuturesConvertersImpl$CF.thenAccept(FutureConvertersImpl.scala:37)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:279)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:190)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: scala.meta.internal.metals.debug.BuildTargetNotFoundForPathException: No build target could be found for the path: C:\Users\Bruno Megharba\Downloads\td_a_rendre\src\main\scala\Main.scala
+	at scala.meta.internal.metals.debug.DebugProvider.debugDiscovery(DebugProvider.scala:469)
+	at scala.meta.internal.metals.debug.DebugProvider.runCommandDiscovery(DebugProvider.scala:419)
+	at scala.meta.internal.metals.MetalsLspService.executeCommand(MetalsLspService.scala:1859)
+	at scala.meta.metals.lsp.DelegatingScalaService.executeCommand(DelegatingScalaService.scala:169)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.request(GenericEndpoint.java:120)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleRequest(RemoteEndpoint.java:261)
+	... 9 more
+
+2023.07.11 12:19:43 WARN  no build target for: C:\Users\Bruno Megharba\Downloads\td_a_rendre\src\main\scala\Data.scala
+2023.07.11 12:19:53 WARN  no build target for: C:\Users\Bruno Megharba\Downloads\td_a_rendre\src\main\scala\Main.scala
+2023.07.11 12:20:27 INFO  Shutting down server
+2023.07.11 12:20:27 INFO  shutting down Metals
+2023.07.11 12:20:27 INFO  Exiting server
+2023.07.11 12:22:38 INFO  Started: Metals version 0.11.12 in workspace 'C:\td_a_rendre' for client Visual Studio Code 1.80.0.
+juil. 11, 2023 12:22:38 PM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.16.3 by Redgate
+juil. 11, 2023 12:22:39 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+juil. 11, 2023 12:22:39 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+juil. 11, 2023 12:22:39 PM org.flywaydb.core.internal.database.base.BaseDatabaseType createDatabase
+INFO: Database: jdbc:h2:file:C:\td_a_rendre\.metals\metals (H2 2.1)
+juil. 11, 2023 12:22:39 PM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.026s)
+juil. 11, 2023 12:22:39 PM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": 4
+juil. 11, 2023 12:22:39 PM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Schema "PUBLIC" is up to date. No migration necessary.
+2023.07.11 12:22:39 INFO  time: initialize in 0.71s
+2023.07.11 12:22:41 WARN  Build server is not auto-connectable.
+2023.07.11 12:22:49 INFO  running 'C:\Program Files\Java\jdk-11.0.17\bin\java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -Dsbt.version=1.8.2 -jar C:\Users\BRUNOM~1\AppData\Local\Temp\metals3140431831900575930\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2023.07.11 12:22:52 INFO  [info] Updated file C:\td_a_rendre\project\build.properties: set sbt.version to 1.8.2
+2023.07.11 12:22:52 INFO  [info] welcome to sbt 1.8.2 (Oracle Corporation Java 11.0.17)
+2023.07.11 12:22:55 INFO  [info] loading settings for project td_a_rendre-build-build-build from metals.sbt ...
+2023.07.11 12:22:55 INFO  [info] loading project definition from C:\td_a_rendre\project\project\project
+2023.07.11 12:23:01 INFO  [info] loading settings for project td_a_rendre-build-build from metals.sbt ...
+2023.07.11 12:23:01 INFO  [info] loading project definition from C:\td_a_rendre\project\project
+2023.07.11 12:23:10 INFO  [success] Generated .bloop\td_a_rendre-build-build.json
+2023.07.11 12:23:10 INFO  [success] Total time: 9 s, completed 11 juil. 2023 à 12:23:10
+2023.07.11 12:23:11 INFO  [info] loading settings for project td_a_rendre-build from metals.sbt,plugins.sbt ...
+2023.07.11 12:23:11 INFO  [info] loading project definition from C:\td_a_rendre\project
+2023.07.11 12:23:14 INFO  [success] Generated .bloop\td_a_rendre-build.json
+2023.07.11 12:23:14 INFO  [success] Total time: 2 s, completed 11 juil. 2023 à 12:23:14
+2023.07.11 12:23:16 INFO  [info] loading settings for project td_a_rendre from build.sbt ...
+2023.07.11 12:23:16 INFO  [info] set current project to td_a_rendre (in build file:/C:/td_a_rendre/)
+2023.07.11 12:23:18 INFO  [success] Generated .bloop\td_a_rendre-test.json
+2023.07.11 12:23:18 INFO  [success] Generated .bloop\td_a_rendre.json
+2023.07.11 12:23:18 INFO  [success] Total time: 2 s, completed 11 juil. 2023 à 12:23:18
+2023.07.11 12:23:18 INFO  time: ran 'sbt bloopInstall' in 28s
+2023.07.11 12:23:18 INFO  Attempting to connect to the build server...
+2023.07.11 12:23:18 INFO  Setting up current java home C:\Program Files\Java\jdk-11.0.17 in C:\Users\Bruno Megharba\.bloop\bloop.json
+2023.07.11 12:23:41 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\td_a_rendre\.metals\bsp.trace.json or C:\Users\Bruno Megharba\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2023.07.11 12:23:45 INFO  Attempting to connect to the build server...
+2023.07.11 12:23:45 INFO  Bloop uses C:\Program Files\Java\jdk-11.0.17 defined at C:\Users\Bruno Megharba\.bloop\bloop.json
+2023.07.11 12:23:45 INFO  Attempting to connect to the build server...
+2023.07.11 12:23:45 INFO  Bloop uses C:\Program Files\Java\jdk-11.0.17 defined at C:\Users\Bruno Megharba\.bloop\bloop.json
+2023.07.11 12:23:45 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\td_a_rendre\project\.metals\bsp.trace.json or C:\Users\Bruno Megharba\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2023.07.11 12:23:45 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\td_a_rendre\project\project\.metals\bsp.trace.json or C:\Users\Bruno Megharba\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2023.07.11 12:23:51 INFO  time: Connected to build server in 32s
+2023.07.11 12:23:51 INFO  Connected to Build server: Bloop v1.5.6
+2023.07.11 12:23:51 INFO  time: Imported build in 0.57s
+2023.07.11 12:24:04 INFO  time: indexed workspace in 13s
+2023.07.11 12:28:33 INFO  compiling td_a_rendre (3 scala sources)
+2023.07.11 12:28:48 INFO  time: compiled td_a_rendre in 15s
+2023.07.11 12:46:32 INFO  Started: Metals version 0.11.12 in workspace 'C:\td_a_rendre' for client Visual Studio Code 1.80.0.
+juil. 11, 2023 12:46:33 PM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.16.3 by Redgate
+juil. 11, 2023 12:46:33 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+juil. 11, 2023 12:46:33 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+juil. 11, 2023 12:46:36 PM org.flywaydb.core.internal.database.base.BaseDatabaseType createDatabase
+INFO: Database: jdbc:h2:file:C:\td_a_rendre\.metals\metals (H2 2.1)
+juil. 11, 2023 12:46:36 PM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.023s)
+juil. 11, 2023 12:46:36 PM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": 4
+juil. 11, 2023 12:46:36 PM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Schema "PUBLIC" is up to date. No migration necessary.
+2023.07.11 12:46:37 INFO  time: initialize in 4.12s
+2023.07.11 12:46:39 INFO  Attempting to connect to the build server...
+2023.07.11 12:46:39 INFO  skipping build import with status 'Installed'
+2023.07.11 12:46:39 INFO  Bloop uses C:\Program Files\Java\jdk-11.0.17 defined at C:\Users\Bruno Megharba\.bloop\bloop.json
+2023.07.11 12:46:44 INFO  no build target found for C:\td_a_rendre\src\main\scala\ArgumentParser.scala. Using presentation compiler with project's scala-library version: 3.2.2
+2023.07.11 12:46:45 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\td_a_rendre\.metals\bsp.trace.json or C:\Users\Bruno Megharba\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2023.07.11 12:46:45 INFO  Attempting to connect to the build server...
+2023.07.11 12:46:45 INFO  Bloop uses C:\Program Files\Java\jdk-11.0.17 defined at C:\Users\Bruno Megharba\.bloop\bloop.json
+2023.07.11 12:46:45 INFO  Attempting to connect to the build server...
+2023.07.11 12:46:45 INFO  Bloop uses C:\Program Files\Java\jdk-11.0.17 defined at C:\Users\Bruno Megharba\.bloop\bloop.json
+2023.07.11 12:46:45 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\td_a_rendre\project\project\.metals\bsp.trace.json or C:\Users\Bruno Megharba\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2023.07.11 12:46:45 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\td_a_rendre\project\.metals\bsp.trace.json or C:\Users\Bruno Megharba\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2023.07.11 12:46:45 INFO  time: Connected to build server in 6.27s
+2023.07.11 12:46:45 INFO  Connected to Build server: Bloop v1.5.6
+2023.07.11 12:46:45 INFO  time: Imported build in 0.43s
+2023.07.11 12:46:46 INFO  time: code lens generation in 7.28s
+2023.07.11 12:46:50 INFO  time: indexed workspace in 4.04s
+2023.07.11 12:46:51 INFO  compiling td_a_rendre (3 scala sources)
+2023.07.11 12:46:54 INFO  time: compiled td_a_rendre in 3.33s
+2023.07.11 12:46:54 INFO  compiling td_a_rendre (3 scala sources)
+2023.07.11 12:46:54 INFO  time: compiled td_a_rendre in 0.64s
+2023.07.11 12:52:32 INFO  compiling td_a_rendre (3 scala sources)
+2023.07.11 12:52:35 INFO  time: compiled td_a_rendre in 3.34s
+2023.07.11 12:55:06 INFO  compiling td_a_rendre-test (1 scala source)
+2023.07.11 12:55:07 INFO  time: compiled td_a_rendre-test in 1.17s
+juil. 11, 2023 12:55:45 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 169
+2023.07.11 13:11:32 INFO  compiling td_a_rendre-test (1 scala source)
+2023.07.11 13:11:34 INFO  time: compiled td_a_rendre-test in 1.46s
+juil. 11, 2023 1:13:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 296
+2023.07.11 13:17:10 INFO  compiling td_a_rendre-test (1 scala source)
+2023.07.11 13:17:11 INFO  time: compiled td_a_rendre-test in 1.47s
+2023.07.11 13:20:36 INFO  compiling td_a_rendre (1 scala source)
+2023.07.11 13:20:36 INFO  time: compiled td_a_rendre in 0.15s
+2023.07.11 13:21:10 INFO  compiling td_a_rendre (1 scala source)
+2023.07.11 13:21:11 INFO  time: compiled td_a_rendre in 1.02s
+juil. 11, 2023 1:21:48 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 950
+2023.07.11 13:23:28 INFO  compiling td_a_rendre-test (1 scala source)
+2023.07.11 13:23:29 INFO  time: compiled td_a_rendre-test in 1.15s
+2023.07.11 13:26:25 INFO  compiling td_a_rendre-test (1 scala source)
+2023.07.11 13:26:26 INFO  time: compiled td_a_rendre-test in 1.2s
+2023.07.11 13:29:26 INFO  running 'C:\Program Files\Java\jdk-11.0.17\bin\java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\BRUNOM~1\AppData\Local\Temp\metals8093516357513776921\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2023.07.11 13:29:28 INFO  [info] welcome to sbt 1.8.2 (Oracle Corporation Java 11.0.17)
+2023.07.11 13:29:28 INFO  [info] loading settings for project td_a_rendre-build-build-build from metals.sbt ...
+2023.07.11 13:29:30 INFO  [info] loading project definition from C:\td_a_rendre\project\project\project
+2023.07.11 13:29:30 INFO  [info] loading settings for project td_a_rendre-build-build from metals.sbt ...
+2023.07.11 13:29:31 INFO  [info] loading project definition from C:\td_a_rendre\project\project
+2023.07.11 13:29:33 INFO  [success] Generated .bloop\td_a_rendre-build-build.json
+2023.07.11 13:29:33 INFO  [success] Total time: 3 s, completed 11 juil. 2023 à 13:29:33
+2023.07.11 13:29:35 INFO  [info] loading settings for project td_a_rendre-build from metals.sbt,plugins.sbt ...
+2023.07.11 13:29:35 INFO  [info] loading project definition from C:\td_a_rendre\project
+2023.07.11 13:29:42 INFO  [success] Generated .bloop\td_a_rendre-build.json
+2023.07.11 13:29:42 INFO  [success] Total time: 7 s, completed 11 juil. 2023 à 13:29:42
+2023.07.11 13:29:43 INFO  [info] loading settings for project td_a_rendre from build.sbt ...
+2023.07.11 13:29:43 INFO  [info] set current project to td_a_rendre (in build file:/C:/td_a_rendre/)
+2023.07.11 13:29:43 INFO  [success] Generated .bloop\td_a_rendre-test.json
+2023.07.11 13:29:43 INFO  [success] Generated .bloop\td_a_rendre.json
+2023.07.11 13:29:44 INFO  [success] Total time: 1 s, completed 11 juil. 2023 à 13:29:44
+2023.07.11 13:29:45 INFO  time: ran 'sbt bloopInstall' in 18s
+2023.07.11 13:29:45 INFO  Disconnecting from Bloop session...
+2023.07.11 13:29:45 INFO  Shut down connection with build server.
+2023.07.11 13:29:45 INFO  Shut down connection with build server.
+2023.07.11 13:29:45 INFO  Shut down connection with build server.
+2023.07.11 13:29:45 INFO  Attempting to connect to the build server...
+2023.07.11 13:29:45 INFO  Bloop uses C:\Program Files\Java\jdk-11.0.17 defined at C:\Users\Bruno Megharba\.bloop\bloop.json
+2023.07.11 13:29:45 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\td_a_rendre\.metals\bsp.trace.json or C:\Users\Bruno Megharba\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2023.07.11 13:29:45 INFO  Attempting to connect to the build server...
+2023.07.11 13:29:45 INFO  Bloop uses C:\Program Files\Java\jdk-11.0.17 defined at C:\Users\Bruno Megharba\.bloop\bloop.json
+2023.07.11 13:29:45 INFO  Attempting to connect to the build server...
+2023.07.11 13:29:45 INFO  Bloop uses C:\Program Files\Java\jdk-11.0.17 defined at C:\Users\Bruno Megharba\.bloop\bloop.json
+2023.07.11 13:29:45 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\td_a_rendre\project\project\.metals\bsp.trace.json or C:\Users\Bruno Megharba\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2023.07.11 13:29:45 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\td_a_rendre\project\.metals\bsp.trace.json or C:\Users\Bruno Megharba\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2023.07.11 13:29:45 INFO  time: Connected to build server in 0.28s
+2023.07.11 13:29:45 INFO  Connected to Build server: Bloop v1.5.6
+2023.07.11 13:29:45 INFO  time: Imported build in 0.33s
+2023.07.11 13:29:48 INFO  time: indexed workspace in 2.92s
+2023.07.11 13:29:50 INFO  time: code lens generation in 1.49s
+2023.07.11 13:51:44 INFO  compiling td_a_rendre-test (1 scala source)
+2023.07.11 13:51:44 INFO  time: compiled td_a_rendre-test in 0.33s
+2023.07.11 14:05:09 WARN  Using indexes to guess the definition of Vector
+juil. 11, 2023 2:08:31 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1795
+2023.07.11 14:14:24 WARN  Using indexes to guess the definition of data
+Exception in thread "pool-15-thread-1" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.$anonfun$onCompilerJobQueue$1(CompilerAccess.scala:195)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:152)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023.07.11 14:14:42 INFO  compiling td_a_rendre-test (1 scala source)
+2023.07.11 14:14:43 INFO  time: compiled td_a_rendre-test in 1.18s
+2023.07.11 14:14:57 INFO  compiling td_a_rendre-test (1 scala source)
+2023.07.11 14:14:57 INFO  time: compiled td_a_rendre-test in 0.82s
+2023.07.11 14:20:26 INFO  compiling td_a_rendre-test (1 scala source)
+2023.07.11 14:20:28 INFO  time: compiled td_a_rendre-test in 1.09s
+2023.07.11 14:21:17 INFO  compiling td_a_rendre-test (1 scala source)
+2023.07.11 14:21:18 INFO  time: compiled td_a_rendre-test in 1.13s
+2023.07.11 14:30:52 INFO  compiling td_a_rendre-test (1 scala source)
+2023.07.11 14:30:52 INFO  time: compiled td_a_rendre-test in 0.79s
+2023.07.11 14:32:05 INFO  compiling td_a_rendre-test (1 scala source)
+2023.07.11 14:32:06 INFO  time: compiled td_a_rendre-test in 1.05s
+2023.07.11 14:35:55 INFO  compiling td_a_rendre (1 scala source)
+2023.07.11 14:35:55 INFO  time: compiled td_a_rendre in 0.8s
+2023.07.11 14:36:29 INFO  compiling td_a_rendre (1 scala source)
+2023.07.11 14:36:29 INFO  time: compiled td_a_rendre in 0.93s
+2023.07.11 14:38:52 INFO  compiling td_a_rendre-test (1 scala source)
+2023.07.11 14:38:52 INFO  time: compiled td_a_rendre-test in 0.82s
+juil. 11, 2023 2:40:38 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2906
+2023.07.11 14:41:21 INFO  compiling td_a_rendre (1 scala source)
+2023.07.11 14:41:21 INFO  time: compiled td_a_rendre in 0.8s
+2023.07.11 14:45:59 INFO  compiling td_a_rendre (1 scala source)
+2023.07.11 14:45:59 INFO  time: compiled td_a_rendre in 0.89s
+2023.07.11 14:46:08 INFO  compiling td_a_rendre-test (1 scala source)
+2023.07.11 14:46:08 INFO  time: compiled td_a_rendre-test in 0.76s
+2023.07.11 14:49:10 INFO  compiling td_a_rendre-test (1 scala source)
+2023.07.11 14:49:10 INFO  time: compiled td_a_rendre-test in 0.88s
+2023.07.11 14:50:08 INFO  compiling td_a_rendre-test (1 scala source)
+2023.07.11 14:50:08 INFO  time: compiled td_a_rendre-test in 0.92s
+2023.07.11 14:56:58 INFO  compiling td_a_rendre-test (1 scala source)
+2023.07.11 14:56:58 INFO  time: compiled td_a_rendre-test in 0.73s
+2023.07.11 15:57:53 INFO  compiling td_a_rendre-test (1 scala source)
+2023.07.11 15:57:53 INFO  time: compiled td_a_rendre-test in 0.4s
+2023.07.11 15:57:53 INFO  compiling td_a_rendre-test (1 scala source)
+2023.07.11 15:57:53 INFO  time: compiled td_a_rendre-test in 0.13s
+2023.07.11 15:58:07 INFO  compiling td_a_rendre-test (1 scala source)
+2023.07.11 15:58:08 INFO  time: compiled td_a_rendre-test in 1.04s
+2023.07.11 16:04:54 INFO  Shutting down server
+2023.07.11 16:04:54 INFO  shutting down Metals
+2023.07.11 16:04:54 INFO  Shut down connection with build server.
+2023.07.11 16:04:54 INFO  Shut down connection with build server.
+2023.07.11 16:04:54 INFO  Shut down connection with build server.
+2023.07.11 16:04:54 INFO  Exiting server
+2023.07.11 16:07:57 INFO  Started: Metals version 0.11.12 in workspace 'C:\td_a_rendre' for client Visual Studio Code 1.80.0.
+juil. 11, 2023 4:07:57 PM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.16.3 by Redgate
+juil. 11, 2023 4:07:57 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+juil. 11, 2023 4:07:57 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+juil. 11, 2023 4:07:58 PM org.flywaydb.core.internal.database.base.BaseDatabaseType createDatabase
+INFO: Database: jdbc:h2:file:C:\td_a_rendre\.metals\metals (H2 2.1)
+juil. 11, 2023 4:07:58 PM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.026s)
+juil. 11, 2023 4:07:58 PM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": 4
+juil. 11, 2023 4:07:58 PM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Schema "PUBLIC" is up to date. No migration necessary.
+2023.07.11 16:07:58 INFO  time: initialize in 0.86s
+2023.07.11 16:08:00 INFO  Attempting to connect to the build server...
+2023.07.11 16:08:00 INFO  Bloop uses C:\Program Files\Java\jdk-11.0.17 defined at C:\Users\Bruno Megharba\.bloop\bloop.json
+2023.07.11 16:08:01 INFO  skipping build import with status 'Installed'
+2023.07.11 16:08:00 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\td_a_rendre\.metals\bsp.trace.json or C:\Users\Bruno Megharba\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2023.07.11 16:08:00 INFO  Attempting to connect to the build server...
+2023.07.11 16:08:00 INFO  Bloop uses C:\Program Files\Java\jdk-11.0.17 defined at C:\Users\Bruno Megharba\.bloop\bloop.json
+2023.07.11 16:08:00 INFO  Attempting to connect to the build server...
+2023.07.11 16:08:00 INFO  Bloop uses C:\Program Files\Java\jdk-11.0.17 defined at C:\Users\Bruno Megharba\.bloop\bloop.json
+2023.07.11 16:08:00 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\td_a_rendre\project\project\.metals\bsp.trace.json or C:\Users\Bruno Megharba\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2023.07.11 16:08:01 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\td_a_rendre\project\.metals\bsp.trace.json or C:\Users\Bruno Megharba\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2023.07.11 16:08:01 INFO  time: Connected to build server in 0.72s
+2023.07.11 16:08:01 INFO  Connected to Build server: Bloop v1.5.6
+2023.07.11 16:08:02 INFO  time: Imported build in 0.47s
+2023.07.11 16:08:07 INFO  time: indexed workspace in 5.06s

@@ -1,0 +1,1132 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          ArgumentParser.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier, monospace;'>1 <span style=''>package fr.esgi.iabd.data
+</span>2 <span style=''>
+</span>3 <span style=''>import scopt.OParser
+</span>4 <span style=''>import java.io.File
+</span>5 <span style=''>
+</span>6 <span style=''>case class Arguments(path: String = &quot;&quot;, gender: Option[String] = None)
+</span>7 <span style=''>
+</span>8 <span style=''>object ArgumentsParser {
+</span>9 <span style=''>  val builder = </span><span style='background: #AEF1AE'>OParser.builder[Arguments]</span><span style=''>
+</span>10 <span style=''>
+</span>11 <span style=''>  val parser = {
+</span>12 <span style=''>    import builder._
+</span>13 <span style=''>
+</span>14 <span style=''>    </span><span style='background: #AEF1AE'>OParser.sequence(
+</span>15 <span style=''></span><span style='background: #AEF1AE'>      help('h', &quot;help&quot;),
+</span>16 <span style=''></span><span style='background: #AEF1AE'>      arg[String](&quot;path&quot;)
+</span>17 <span style=''></span><span style='background: #AEF1AE'>        .text(&quot;Path of csv file to read&quot;)
+</span>18 <span style=''></span><span style='background: #AEF1AE'>        .action((path, config) =&gt; config.copy(path = path)),
+</span>19 <span style=''></span><span style='background: #AEF1AE'>      opt [String] ('g', &quot;gender&quot;)
+</span>20 <span style=''></span><span style='background: #AEF1AE'>        .text(&quot;Gender used to filter data&quot;)
+</span>21 <span style=''></span><span style='background: #AEF1AE'>        .action((gender, config) =&gt; config.copy(gender = Some(gender)))
+</span>22 <span style=''></span><span style='background: #AEF1AE'>        .validate(g =&gt;
+</span>23 <span style=''></span><span style='background: #AEF1AE'>            if (g == &quot;m&quot; || g == &quot;f&quot; || g == &quot;u&quot;) success
+</span>24 <span style=''></span><span style='background: #AEF1AE'>            else failure(s&quot;Unknown gender $g&quot;)
+</span>25 <span style=''></span><span style='background: #AEF1AE'>          )
+</span>26 <span style=''></span><span style='background: #AEF1AE'>    )</span><span style=''>
+</span>27 <span style=''>  }
+</span>28 <span style=''>
+</span>29 <span style=''>  def parse(args: Array[String]): Option[Arguments] = {
+</span>30 <span style=''>    </span><span style='background: #AEF1AE'>OParser.parse(parser, args, Arguments())</span><span style=''> match {
+</span>31 <span style=''>      case Some(arguments) =&gt;
+</span>32 <span style=''>        if (</span><span style='background: #AEF1AE'>isValidFile(arguments.path)</span><span style=''>) </span><span style='background: #AEF1AE'>Some(arguments)</span><span style=''>
+</span>33 <span style=''>        else </span><span style='background: #F0ADAD'>None</span><span style=''>
+</span>34 <span style=''>      case _ =&gt;
+</span>35 <span style=''>        </span><span style='background: #AEF1AE'>None</span><span style=''>
+</span>36 <span style=''>    }
+</span>37 <span style=''>  }
+</span>38 <span style=''>
+</span>39 <span style=''>  private def isValidFile(path: String): Boolean = {
+</span>40 <span style=''>    val file = </span><span style='background: #AEF1AE'>new File(path)</span><span style=''>
+</span>41 <span style=''>    </span><span style='background: #AEF1AE'>file.exists() &amp;&amp; file.isFile &amp;&amp; file.getName.endsWith(&quot;.csv&quot;)</span><span style=''>
+</span>42 <span style=''>  }
+</span>43 <span style=''>    
+</span>44 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Tests</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          9
+        </td>
+        <td>
+          1
+        </td>
+        <td>
+          182
+          -
+          208
+        </td>
+        <td>
+          TypeApply
+        </td>
+        <td>
+          scopt.OParser.builder
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          scopt.OParser.builder[fr.esgi.iabd.data.Arguments]
+        </td>
+      </tr><tr>
+        <td>
+          14
+        </td>
+        <td>
+          26
+        </td>
+        <td>
+          253
+          -
+          721
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scopt.OParser.sequence
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          scopt.OParser.sequence[Unit, fr.esgi.iabd.data.Arguments](ArgumentsParser.this.builder.help('h', &quot;help&quot;), ArgumentsParser.this.builder.arg[String](&quot;path&quot;)(scopt.this.Read.stringRead).text(&quot;Path of csv file to read&quot;).action(((path: String, config: fr.esgi.iabd.data.Arguments) =&gt; config.copy(path, config.copy$default$2))), ArgumentsParser.this.builder.opt[String]('g', &quot;gender&quot;)(scopt.this.Read.stringRead).text(&quot;Gender used to filter data&quot;).action(((gender: String, config: fr.esgi.iabd.data.Arguments) =&gt; {
+  &lt;artifact&gt; val x$1: Some[String] = scala.Some.apply[String](gender);
+  &lt;artifact&gt; val x$2: String = config.copy$default$1;
+  config.copy(x$2, x$1)
+})).validate(((g: String) =&gt; if (g.==(&quot;m&quot;).||(g.==(&quot;f&quot;)).||(g.==(&quot;u&quot;)))
+  ArgumentsParser.this.builder.success
+else
+  ArgumentsParser.this.builder.failure(scala.StringContext.apply(&quot;Unknown gender &quot;, &quot;&quot;).s(g)))))
+        </td>
+      </tr><tr>
+        <td>
+          15
+        </td>
+        <td>
+          2
+        </td>
+        <td>
+          277
+          -
+          294
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scopt.OParserBuilder.help
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          ArgumentsParser.this.builder.help('h', &quot;help&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          16
+        </td>
+        <td>
+          4
+        </td>
+        <td>
+          313
+          -
+          313
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scopt.Read.stringRead
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          scopt.this.Read.stringRead
+        </td>
+      </tr><tr>
+        <td>
+          16
+        </td>
+        <td>
+          3
+        </td>
+        <td>
+          314
+          -
+          320
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;path&quot;
+        </td>
+      </tr><tr>
+        <td>
+          17
+        </td>
+        <td>
+          5
+        </td>
+        <td>
+          336
+          -
+          362
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;Path of csv file to read&quot;
+        </td>
+      </tr><tr>
+        <td>
+          18
+        </td>
+        <td>
+          8
+        </td>
+        <td>
+          302
+          -
+          423
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scopt.OParser.action
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          ArgumentsParser.this.builder.arg[String](&quot;path&quot;)(scopt.this.Read.stringRead).text(&quot;Path of csv file to read&quot;).action(((path: String, config: fr.esgi.iabd.data.Arguments) =&gt; config.copy(path, config.copy$default$2)))
+        </td>
+      </tr><tr>
+        <td>
+          18
+        </td>
+        <td>
+          7
+        </td>
+        <td>
+          398
+          -
+          422
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          fr.esgi.iabd.data.Arguments.copy
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          config.copy(path, config.copy$default$2)
+        </td>
+      </tr><tr>
+        <td>
+          18
+        </td>
+        <td>
+          6
+        </td>
+        <td>
+          405
+          -
+          405
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          fr.esgi.iabd.data.Arguments.copy$default$2
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          config.copy$default$2
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          11
+        </td>
+        <td>
+          444
+          -
+          444
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scopt.Read.stringRead
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          scopt.this.Read.stringRead
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          10
+        </td>
+        <td>
+          450
+          -
+          458
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;gender&quot;
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          9
+        </td>
+        <td>
+          445
+          -
+          448
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          'g'
+        </td>
+      </tr><tr>
+        <td>
+          20
+        </td>
+        <td>
+          12
+        </td>
+        <td>
+          474
+          -
+          502
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;Gender used to filter data&quot;
+        </td>
+      </tr><tr>
+        <td>
+          21
+        </td>
+        <td>
+          14
+        </td>
+        <td>
+          547
+          -
+          547
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          fr.esgi.iabd.data.Arguments.copy$default$1
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          config.copy$default$1
+        </td>
+      </tr><tr>
+        <td>
+          21
+        </td>
+        <td>
+          13
+        </td>
+        <td>
+          561
+          -
+          573
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Some.apply
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Some.apply[String](gender)
+        </td>
+      </tr><tr>
+        <td>
+          21
+        </td>
+        <td>
+          15
+        </td>
+        <td>
+          540
+          -
+          574
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          fr.esgi.iabd.data.Arguments.copy
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          config.copy(x$2, x$1)
+        </td>
+      </tr><tr>
+        <td>
+          22
+        </td>
+        <td>
+          25
+        </td>
+        <td>
+          431
+          -
+          715
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scopt.OParser.validate
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          ArgumentsParser.this.builder.opt[String]('g', &quot;gender&quot;)(scopt.this.Read.stringRead).text(&quot;Gender used to filter data&quot;).action(((gender: String, config: fr.esgi.iabd.data.Arguments) =&gt; {
+  &lt;artifact&gt; val x$1: Some[String] = scala.Some.apply[String](gender);
+  &lt;artifact&gt; val x$2: String = config.copy$default$1;
+  config.copy(x$2, x$1)
+})).validate(((g: String) =&gt; if (g.==(&quot;m&quot;).||(g.==(&quot;f&quot;)).||(g.==(&quot;u&quot;)))
+  ArgumentsParser.this.builder.success
+else
+  ArgumentsParser.this.builder.failure(scala.StringContext.apply(&quot;Unknown gender &quot;, &quot;&quot;).s(g))))
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          17
+        </td>
+        <td>
+          627
+          -
+          635
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.Object.==
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          g.==(&quot;f&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          20
+        </td>
+        <td>
+          649
+          -
+          656
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scopt.OParserBuilder.success
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          ArgumentsParser.this.builder.success
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          16
+        </td>
+        <td>
+          620
+          -
+          623
+        </td>
+        <td>
+          Literal
+        </td>
+        <td>
+          &lt;nosymbol&gt;
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          &quot;m&quot;
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          19
+        </td>
+        <td>
+          615
+          -
+          647
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Boolean.||
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          g.==(&quot;m&quot;).||(g.==(&quot;f&quot;)).||(g.==(&quot;u&quot;))
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          18
+        </td>
+        <td>
+          639
+          -
+          647
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.Object.==
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          g.==(&quot;u&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          23
+        </td>
+        <td>
+          21
+        </td>
+        <td>
+          649
+          -
+          656
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scopt.OParserBuilder.success
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          ArgumentsParser.this.builder.success
+        </td>
+      </tr><tr>
+        <td>
+          24
+        </td>
+        <td>
+          23
+        </td>
+        <td>
+          674
+          -
+          703
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scopt.OParserBuilder.failure
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          ArgumentsParser.this.builder.failure(scala.StringContext.apply(&quot;Unknown gender &quot;, &quot;&quot;).s(g))
+        </td>
+      </tr><tr>
+        <td>
+          24
+        </td>
+        <td>
+          22
+        </td>
+        <td>
+          682
+          -
+          702
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.StringContext.s
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.StringContext.apply(&quot;Unknown gender &quot;, &quot;&quot;).s(g)
+        </td>
+      </tr><tr>
+        <td>
+          24
+        </td>
+        <td>
+          24
+        </td>
+        <td>
+          674
+          -
+          703
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scopt.OParserBuilder.failure
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          ArgumentsParser.this.builder.failure(scala.StringContext.apply(&quot;Unknown gender &quot;, &quot;&quot;).s(g))
+        </td>
+      </tr><tr>
+        <td>
+          30
+        </td>
+        <td>
+          32
+        </td>
+        <td>
+          787
+          -
+          827
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scopt.OParser.parse
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          scopt.OParser.parse[fr.esgi.iabd.data.Arguments](ArgumentsParser.this.parser, scala.Predef.wrapRefArray[String](args), Arguments.apply(Arguments.apply$default$1, Arguments.apply$default$2))
+        </td>
+      </tr><tr>
+        <td>
+          30
+        </td>
+        <td>
+          29
+        </td>
+        <td>
+          815
+          -
+          815
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          fr.esgi.iabd.data.Arguments.apply$default$1
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          Arguments.apply$default$1
+        </td>
+      </tr><tr>
+        <td>
+          30
+        </td>
+        <td>
+          31
+        </td>
+        <td>
+          815
+          -
+          826
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          fr.esgi.iabd.data.Arguments.apply
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          Arguments.apply(Arguments.apply$default$1, Arguments.apply$default$2)
+        </td>
+      </tr><tr>
+        <td>
+          30
+        </td>
+        <td>
+          28
+        </td>
+        <td>
+          809
+          -
+          813
+        </td>
+        <td>
+          ApplyImplicitView
+        </td>
+        <td>
+          scala.LowPriorityImplicits.wrapRefArray
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.wrapRefArray[String](args)
+        </td>
+      </tr><tr>
+        <td>
+          30
+        </td>
+        <td>
+          27
+        </td>
+        <td>
+          801
+          -
+          807
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          fr.esgi.iabd.data.ArgumentsParser.parser
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          ArgumentsParser.this.parser
+        </td>
+      </tr><tr>
+        <td>
+          30
+        </td>
+        <td>
+          30
+        </td>
+        <td>
+          815
+          -
+          815
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          fr.esgi.iabd.data.Arguments.apply$default$2
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          Arguments.apply$default$2
+        </td>
+      </tr><tr>
+        <td>
+          32
+        </td>
+        <td>
+          35
+        </td>
+        <td>
+          907
+          -
+          922
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Some.apply
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Some.apply[fr.esgi.iabd.data.Arguments](arguments)
+        </td>
+      </tr><tr>
+        <td>
+          32
+        </td>
+        <td>
+          34
+        </td>
+        <td>
+          878
+          -
+          905
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          fr.esgi.iabd.data.ArgumentsParser.isValidFile
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          ArgumentsParser.this.isValidFile(arguments.path)
+        </td>
+      </tr><tr>
+        <td>
+          32
+        </td>
+        <td>
+          36
+        </td>
+        <td>
+          907
+          -
+          922
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scala.Some.apply
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Some.apply[fr.esgi.iabd.data.Arguments](arguments)
+        </td>
+      </tr><tr>
+        <td>
+          32
+        </td>
+        <td>
+          33
+        </td>
+        <td>
+          890
+          -
+          904
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          fr.esgi.iabd.data.Arguments.path
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          arguments.path
+        </td>
+      </tr><tr>
+        <td>
+          33
+        </td>
+        <td>
+          38
+        </td>
+        <td>
+          936
+          -
+          940
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scala.None
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #F0ADAD">
+          scala.None
+        </td>
+      </tr><tr>
+        <td>
+          33
+        </td>
+        <td>
+          37
+        </td>
+        <td>
+          936
+          -
+          940
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.None
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #F0ADAD">
+          scala.None
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          39
+        </td>
+        <td>
+          965
+          -
+          969
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.None
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.None
+        </td>
+      </tr><tr>
+        <td>
+          40
+        </td>
+        <td>
+          40
+        </td>
+        <td>
+          1049
+          -
+          1063
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.io.File.&lt;init&gt;
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          new java.io.File(path)
+        </td>
+      </tr><tr>
+        <td>
+          41
+        </td>
+        <td>
+          41
+        </td>
+        <td>
+          1085
+          -
+          1096
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.io.File.isFile
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          file.isFile()
+        </td>
+      </tr><tr>
+        <td>
+          41
+        </td>
+        <td>
+          43
+        </td>
+        <td>
+          1068
+          -
+          1129
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Boolean.&amp;&amp;
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          file.exists().&amp;&amp;(file.isFile()).&amp;&amp;(file.getName().endsWith(&quot;.csv&quot;))
+        </td>
+      </tr><tr>
+        <td>
+          41
+        </td>
+        <td>
+          42
+        </td>
+        <td>
+          1100
+          -
+          1129
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.endsWith
+        </td>
+        <td>
+          fr.esgi.iabd.data.argumentsparserspec
+        </td>
+        <td style="background: #AEF1AE">
+          file.getName().endsWith(&quot;.csv&quot;)
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

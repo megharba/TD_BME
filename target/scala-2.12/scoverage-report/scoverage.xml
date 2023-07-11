@@ -1,0 +1,367 @@
+<scoverage 
+statement-count="96" statements-invoked="68" statement-rate="70.83" branch-rate="62.50" version="1.0" timestamp="1689084136121">
+    <packages>
+        <package name="fr.esgi.iabd.data" statement-count="96" statements-invoked="68" statement-rate="70.83">
+            <classes>
+                <class 
+                name="fr.esgi.iabd.data.Main" filename="Main.scala" statement-count="24" statements-invoked="0" statement-rate="0.00" branch-rate="0.00">
+                    <methods>
+                        <method 
+                        name="fr.esgi.iabd.data/Main/run" statement-count="20" statements-invoked="0" statement-rate="0.00" branch-rate="0.00">
+                            <statements>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Main" class-type="Object" full-class-name="fr.esgi.iabd.data.Main" source="C:\td_a_rendre\src\main\scala\Main.scala" method="run" start="436" end="474" line="18" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Main" class-type="Object" full-class-name="fr.esgi.iabd.data.Main" source="C:\td_a_rendre\src\main\scala\Main.scala" method="run" start="371" end="387" line="14" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Main" class-type="Object" full-class-name="fr.esgi.iabd.data.Main" source="C:\td_a_rendre\src\main\scala\Main.scala" method="run" start="515" end="545" line="21" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Main" class-type="Object" full-class-name="fr.esgi.iabd.data.Main" source="C:\td_a_rendre\src\main\scala\Main.scala" method="run" start="331" end="390" line="14" branch="true" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Main" class-type="Object" full-class-name="fr.esgi.iabd.data.Main" source="C:\td_a_rendre\src\main\scala\Main.scala" method="run" start="272" end="286" line="11" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Main" class-type="Object" full-class-name="fr.esgi.iabd.data.Main" source="C:\td_a_rendre\src\main\scala\Main.scala" method="run" start="402" end="431" line="17" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Main" class-type="Object" full-class-name="fr.esgi.iabd.data.Main" source="C:\td_a_rendre\src\main\scala\Main.scala" method="run" start="297" end="321" line="13" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Main" class-type="Object" full-class-name="fr.esgi.iabd.data.Main" source="C:\td_a_rendre\src\main\scala\Main.scala" method="run" start="444" end="473" line="18" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Main" class-type="Object" full-class-name="fr.esgi.iabd.data.Main" source="C:\td_a_rendre\src\main\scala\Main.scala" method="run" start="388" end="389" line="14" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Main" class-type="Object" full-class-name="fr.esgi.iabd.data.Main" source="C:\td_a_rendre\src\main\scala\Main.scala" method="run" start="528" end="544" line="21" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Main" class-type="Object" full-class-name="fr.esgi.iabd.data.Main" source="C:\td_a_rendre\src\main\scala\Main.scala" method="run" start="331" end="390" line="14" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Main" class-type="Object" full-class-name="fr.esgi.iabd.data.Main" source="C:\td_a_rendre\src\main\scala\Main.scala" method="run" start="317" end="321" line="13" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Main" class-type="Object" full-class-name="fr.esgi.iabd.data.Main" source="C:\td_a_rendre\src\main\scala\Main.scala" method="run" start="293" end="293" line="13" branch="true" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Main" class-type="Object" full-class-name="fr.esgi.iabd.data.Main" source="C:\td_a_rendre\src\main\scala\Main.scala" method="run" start="293" end="293" line="13" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Main" class-type="Object" full-class-name="fr.esgi.iabd.data.Main" source="C:\td_a_rendre\src\main\scala\Main.scala" method="run" start="507" end="546" line="21" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Main" class-type="Object" full-class-name="fr.esgi.iabd.data.Main" source="C:\td_a_rendre\src\main\scala\Main.scala" method="run" start="262" end="287" line="11" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Main" class-type="Object" full-class-name="fr.esgi.iabd.data.Main" source="C:\td_a_rendre\src\main\scala\Main.scala" method="run" start="456" end="472" line="18" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Main" class-type="Object" full-class-name="fr.esgi.iabd.data.Main" source="C:\td_a_rendre\src\main\scala\Main.scala" method="run" start="341" end="370" line="14" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Main" class-type="Object" full-class-name="fr.esgi.iabd.data.Main" source="C:\td_a_rendre\src\main\scala\Main.scala" method="run" start="339" end="389" line="14" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Main" class-type="Object" full-class-name="fr.esgi.iabd.data.Main" source="C:\td_a_rendre\src\main\scala\Main.scala" method="run" start="480" end="502" line="20" branch="false" invocation-count="0" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="fr.esgi.iabd.data/Main/&lt;none&gt;" statement-count="4" statements-invoked="0" statement-rate="0.00" branch-rate="0.00">
+                            <statements>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Main" class-type="Object" full-class-name="fr.esgi.iabd.data.Main" source="C:\td_a_rendre\src\main\scala\Main.scala" method="&lt;none&gt;" start="56" end="83" line="5" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Main" class-type="Object" full-class-name="fr.esgi.iabd.data.Main" source="C:\td_a_rendre\src\main\scala\Main.scala" method="&lt;none&gt;" start="78" end="82" line="5" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Main" class-type="Object" full-class-name="fr.esgi.iabd.data.Main" source="C:\td_a_rendre\src\main\scala\Main.scala" method="&lt;none&gt;" start="163" end="199" line="7" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Main" class-type="Object" full-class-name="fr.esgi.iabd.data.Main" source="C:\td_a_rendre\src\main\scala\Main.scala" method="&lt;none&gt;" start="120" end="134" line="6" branch="false" invocation-count="0" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="fr.esgi.iabd.data.ArgumentsParser" filename="ArgumentParser.scala" statement-count="43" statements-invoked="41" statement-rate="95.35" branch-rate="75.00">
+                    <methods>
+                        <method 
+                        name="fr.esgi.iabd.data/ArgumentsParser/&lt;none&gt;" statement-count="26" statements-invoked="26" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="&lt;none&gt;" start="674" end="703" line="24" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="&lt;none&gt;" start="627" end="635" line="23" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="&lt;none&gt;" start="302" end="423" line="18" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="&lt;none&gt;" start="253" end="721" line="14" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="&lt;none&gt;" start="444" end="444" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="&lt;none&gt;" start="649" end="656" line="23" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="&lt;none&gt;" start="277" end="294" line="15" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="&lt;none&gt;" start="336" end="362" line="17" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="&lt;none&gt;" start="547" end="547" line="21" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="&lt;none&gt;" start="313" end="313" line="16" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="&lt;none&gt;" start="561" end="573" line="21" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="&lt;none&gt;" start="682" end="702" line="24" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="&lt;none&gt;" start="620" end="623" line="23" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="&lt;none&gt;" start="398" end="422" line="18" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="&lt;none&gt;" start="431" end="715" line="22" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="&lt;none&gt;" start="450" end="458" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="&lt;none&gt;" start="182" end="208" line="9" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="&lt;none&gt;" start="615" end="647" line="23" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="&lt;none&gt;" start="639" end="647" line="23" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="&lt;none&gt;" start="445" end="448" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="&lt;none&gt;" start="649" end="656" line="23" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="&lt;none&gt;" start="314" end="320" line="16" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="&lt;none&gt;" start="474" end="502" line="20" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="&lt;none&gt;" start="540" end="574" line="21" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="&lt;none&gt;" start="674" end="703" line="24" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="&lt;none&gt;" start="405" end="405" line="18" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="fr.esgi.iabd.data/ArgumentsParser/parse" statement-count="13" statements-invoked="11" statement-rate="84.62" branch-rate="50.00">
+                            <statements>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="parse" start="787" end="827" line="30" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="parse" start="907" end="922" line="32" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="parse" start="815" end="815" line="30" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="parse" start="936" end="940" line="33" branch="true" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="parse" start="815" end="826" line="30" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="parse" start="878" end="905" line="32" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="parse" start="936" end="940" line="33" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="parse" start="809" end="813" line="30" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="parse" start="801" end="807" line="30" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="parse" start="907" end="922" line="32" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="parse" start="815" end="815" line="30" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="parse" start="965" end="969" line="35" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="parse" start="890" end="904" line="32" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="fr.esgi.iabd.data/ArgumentsParser/isValidFile" statement-count="4" statements-invoked="4" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="isValidFile" start="1085" end="1096" line="41" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="isValidFile" start="1049" end="1063" line="40" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="isValidFile" start="1068" end="1129" line="41" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="ArgumentsParser" class-type="Object" full-class-name="fr.esgi.iabd.data.ArgumentsParser" source="C:\td_a_rendre\src\main\scala\ArgumentParser.scala" method="isValidFile" start="1100" end="1129" line="41" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="fr.esgi.iabd.data.Data" filename="Data.scala" statement-count="22" statements-invoked="20" statement-rate="90.91" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="fr.esgi.iabd.data/Data/parse" statement-count="4" statements-invoked="4" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Data" class-type="Object" full-class-name="fr.esgi.iabd.data.Data" source="C:\td_a_rendre\src\main\scala\Data.scala" method="parse" start="924" end="924" line="43" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Data" class-type="Object" full-class-name="fr.esgi.iabd.data.Data" source="C:\td_a_rendre\src\main\scala\Data.scala" method="parse" start="925" end="934" line="43" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Data" class-type="Object" full-class-name="fr.esgi.iabd.data.Data" source="C:\td_a_rendre\src\main\scala\Data.scala" method="parse" start="903" end="941" line="42" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Data" class-type="Object" full-class-name="fr.esgi.iabd.data.Data" source="C:\td_a_rendre\src\main\scala\Data.scala" method="parse" start="915" end="935" line="43" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="fr.esgi.iabd.data/Data/meanAge" statement-count="13" statements-invoked="13" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Data" class-type="Class" full-class-name="fr.esgi.iabd.data.Data" source="C:\td_a_rendre\src\main\scala\Data.scala" method="meanAge" start="716" end="720" line="30" branch="true" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Data" class-type="Class" full-class-name="fr.esgi.iabd.data.Data" source="C:\td_a_rendre\src\main\scala\Data.scala" method="meanAge" start="805" end="810" line="35" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Data" class-type="Class" full-class-name="fr.esgi.iabd.data.Data" source="C:\td_a_rendre\src\main\scala\Data.scala" method="meanAge" start="682" end="686" line="28" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Data" class-type="Class" full-class-name="fr.esgi.iabd.data.Data" source="C:\td_a_rendre\src\main\scala\Data.scala" method="meanAge" start="736" end="832" line="32" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Data" class-type="Class" full-class-name="fr.esgi.iabd.data.Data" source="C:\td_a_rendre\src\main\scala\Data.scala" method="meanAge" start="750" end="824" line="35" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Data" class-type="Class" full-class-name="fr.esgi.iabd.data.Data" source="C:\td_a_rendre\src\main\scala\Data.scala" method="meanAge" start="614" end="654" line="27" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Data" class-type="Class" full-class-name="fr.esgi.iabd.data.Data" source="C:\td_a_rendre\src\main\scala\Data.scala" method="meanAge" start="716" end="720" line="30" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Data" class-type="Class" full-class-name="fr.esgi.iabd.data.Data" source="C:\td_a_rendre\src\main\scala\Data.scala" method="meanAge" start="770" end="770" line="34" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Data" class-type="Class" full-class-name="fr.esgi.iabd.data.Data" source="C:\td_a_rendre\src\main\scala\Data.scala" method="meanAge" start="778" end="785" line="34" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Data" class-type="Class" full-class-name="fr.esgi.iabd.data.Data" source="C:\td_a_rendre\src\main\scala\Data.scala" method="meanAge" start="814" end="824" line="35" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Data" class-type="Class" full-class-name="fr.esgi.iabd.data.Data" source="C:\td_a_rendre\src\main\scala\Data.scala" method="meanAge" start="633" end="653" line="27" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Data" class-type="Class" full-class-name="fr.esgi.iabd.data.Data" source="C:\td_a_rendre\src\main\scala\Data.scala" method="meanAge" start="701" end="714" line="30" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Data" class-type="Class" full-class-name="fr.esgi.iabd.data.Data" source="C:\td_a_rendre\src\main\scala\Data.scala" method="meanAge" start="736" end="832" line="32" branch="true" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="fr.esgi.iabd.data/Data/nbUser" statement-count="3" statements-invoked="3" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Data" class-type="Class" full-class-name="fr.esgi.iabd.data.Data" source="C:\td_a_rendre\src\main\scala\Data.scala" method="nbUser" start="466" end="475" line="20" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Data" class-type="Class" full-class-name="fr.esgi.iabd.data.Data" source="C:\td_a_rendre\src\main\scala\Data.scala" method="nbUser" start="408" end="438" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Data" class-type="Class" full-class-name="fr.esgi.iabd.data.Data" source="C:\td_a_rendre\src\main\scala\Data.scala" method="nbUser" start="419" end="437" line="19" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                        <method 
+                        name="fr.esgi.iabd.data/Data/read" statement-count="2" statements-invoked="0" statement-rate="0.00" branch-rate="0.00">
+                            <statements>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Data" class-type="Object" full-class-name="fr.esgi.iabd.data.Data" source="C:\td_a_rendre\src\main\scala\Data.scala" method="read" start="1002" end="1070" line="52" branch="false" invocation-count="0" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Data" class-type="Object" full-class-name="fr.esgi.iabd.data.Data" source="C:\td_a_rendre\src\main\scala\Data.scala" method="read" start="984" end="1076" line="48" branch="false" invocation-count="0" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+                <class 
+                name="fr.esgi.iabd.data.Row" filename="Data.scala" statement-count="7" statements-invoked="7" statement-rate="100.00" branch-rate="100.00">
+                    <methods>
+                        <method 
+                        name="fr.esgi.iabd.data/Row/parse" statement-count="7" statements-invoked="7" statement-rate="100.00" branch-rate="100.00">
+                            <statements>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Row" class-type="Object" full-class-name="fr.esgi.iabd.data.Row" source="C:\td_a_rendre\src\main\scala\Data.scala" method="parse" start="204" end="258" line="10" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Row" class-type="Object" full-class-name="fr.esgi.iabd.data.Row" source="C:\td_a_rendre\src\main\scala\Data.scala" method="parse" start="178" end="193" line="9" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Row" class-type="Object" full-class-name="fr.esgi.iabd.data.Row" source="C:\td_a_rendre\src\main\scala\Data.scala" method="parse" start="223" end="236" line="10" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Row" class-type="Object" full-class-name="fr.esgi.iabd.data.Row" source="C:\td_a_rendre\src\main\scala\Data.scala" method="parse" start="208" end="221" line="10" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Row" class-type="Object" full-class-name="fr.esgi.iabd.data.Row" source="C:\td_a_rendre\src\main\scala\Data.scala" method="parse" start="238" end="257" line="10" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Row" class-type="Object" full-class-name="fr.esgi.iabd.data.Row" source="C:\td_a_rendre\src\main\scala\Data.scala" method="parse" start="178" end="199" line="9" branch="false" invocation-count="1" ignored="false">
+</statement>
+                                <statement 
+                                package="fr.esgi.iabd.data" class="Row" class-type="Object" full-class-name="fr.esgi.iabd.data.Row" source="C:\td_a_rendre\src\main\scala\Data.scala" method="parse" start="238" end="251" line="10" branch="false" invocation-count="1" ignored="false">
+</statement>
+                            </statements>
+</method>
+                    </methods>
+</class>
+            </classes>
+        </package>
+    </packages>
+</scoverage>

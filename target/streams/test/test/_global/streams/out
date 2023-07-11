@@ -1,0 +1,37 @@
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(fr.esgi.iabd.data.ArgumentsParserSpec, org.scalatest.tools.Framework$$anon$1@2d1d9468, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(MainSpec, org.scalatest.tools.Framework$$anon$1@2d1d9468, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(fr.esgi.iabd.data.DataSpec, org.scalatest.tools.Framework$$anon$1@2d1d9468, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mDataSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mData[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should Without Gender filter calcul number of users[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mData[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should With gender filter calcul number of users[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mData[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should without gender filter calcul mean age of all users[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should With gender filter calcul mean age of users[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should In case there are no users matching the gender filter, return None for the mean age.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should parse lines correctly[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mMainSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mMain[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should work with run mocked[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mArgumentsParserSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mArgumentsParser[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should Parse arguments correct[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should Invalid gender argument x[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should Missing gender argument None[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should validate gender argument x[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should print 'Error to parse arguments' : invalid arguments[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mparse[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should Incorrect arguments return None[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should Incorrect file extension return None argument[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should Non-existent file return None[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should Missing file path return None[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 547 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 16[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 3, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 16, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	fr.esgi.iabd.data.DataSpec[0m
+[0m[[0m[0mdebug[0m] [0m[0m	fr.esgi.iabd.data.ArgumentsParserSpec[0m
+[0m[[0m[0mdebug[0m] [0m[0m	MainSpec[0m

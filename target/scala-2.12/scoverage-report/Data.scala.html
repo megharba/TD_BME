@@ -1,0 +1,796 @@
+<html>
+      <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title id="title">
+          Data.scala.html
+        </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/css/theme.default.min.css" type="text/css"/><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.20.1/js/jquery.tablesorter.min.js"></script><link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" type="text/css"/><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script><script type="text/javascript">
+        $(document).ready(function() {$(".tablesorter").tablesorter();});
+      </script>
+        <style>
+          table.codegrid { font-family: monospace; font-size: 12px; width: auto!important; }table.statementlist { width: auto!important; font-size: 13px; } table.codegrid td { padding: 0!important; border: 0!important } table td.linenumber { width: 40px!important; } 
+        </style>
+      </head>
+      <body style="font-family: monospace;">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#codegrid" data-toggle="tab">Codegrid</a>
+          </li>
+          <li>
+            <a href="#statementlist" data-toggle="tab">Statement List</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="codegrid">
+            <pre style='font-size: 12pt; font-family: courier, monospace;'>1 <span style=''>package fr.esgi.iabd.data
+</span>2 <span style=''>
+</span>3 <span style=''>import scala.io.Source
+</span>4 <span style=''>
+</span>5 <span style=''>case class Row(userId: String, gender: String, age: Int)
+</span>6 <span style=''>
+</span>7 <span style=''>object Row {
+</span>8 <span style=''>  def parse(line: String): Row = {
+</span>9 <span style=''>    val parsedLine = </span><span style='background: #AEF1AE'>line.split(&quot;,&quot;).toSeq</span><span style=''>
+</span>10 <span style=''>    </span><span style='background: #AEF1AE'>Row(parsedLine(0), parsedLine(1), parsedLine(2).toInt)</span><span style=''>
+</span>11 <span style=''>  }
+</span>12 <span style=''>}
+</span>13 <span style=''>
+</span>14 <span style=''>case class Data(data: Vector[Row]) {
+</span>15 <span style=''>
+</span>16 <span style=''>  
+</span>17 <span style=''>  def nbUser(genderO: Option[String] = None): Int = {
+</span>18 <span style=''>    genderO match {
+</span>19 <span style=''>      case Some(gender) =&gt; </span><span style='background: #AEF1AE'>data.count(_.gender == gender)</span><span style=''>
+</span>20 <span style=''>      case _            =&gt; </span><span style='background: #AEF1AE'>data.size</span><span style=''>
+</span>21 <span style=''>    }
+</span>22 <span style=''>  }
+</span>23 <span style=''>
+</span>24 <span style=''> 
+</span>25 <span style=''>  def meanAge(genderO: Option[String] = None): Option[Double] = {
+</span>26 <span style=''>    val users = genderO match {
+</span>27 <span style=''>      case Some(gender) =&gt; </span><span style='background: #AEF1AE'>data.filter(row =&gt; row.gender == gender)</span><span style=''>
+</span>28 <span style=''>      case _            =&gt; </span><span style='background: #AEF1AE'>data</span><span style=''>
+</span>29 <span style=''>    }
+</span>30 <span style=''>    if (</span><span style='background: #AEF1AE'>users.isEmpty</span><span style=''>) </span><span style='background: #AEF1AE'>None</span><span style=''>
+</span>31 <span style=''>    else
+</span>32 <span style=''>      </span><span style='background: #AEF1AE'>Some(
+</span>33 <span style=''></span><span style='background: #AEF1AE'>        users
+</span>34 <span style=''></span><span style='background: #AEF1AE'>          .map(row =&gt; row.age)
+</span>35 <span style=''></span><span style='background: #AEF1AE'>          .reduce(_ + _) / users.size
+</span>36 <span style=''></span><span style='background: #AEF1AE'>      )</span><span style=''>
+</span>37 <span style=''>  }
+</span>38 <span style=''>}
+</span>39 <span style=''>
+</span>40 <span style=''>object Data {
+</span>41 <span style=''>  def parse(lines: Vector[String]): Data = {
+</span>42 <span style=''>    </span><span style='background: #AEF1AE'>Data(
+</span>43 <span style=''></span><span style='background: #AEF1AE'>      lines.map(Row.parse)
+</span>44 <span style=''></span><span style='background: #AEF1AE'>    )</span><span style=''>
+</span>45 <span style=''>  }
+</span>46 <span style=''>
+</span>47 <span style=''>  def read(path: String): Data =
+</span>48 <span style=''>    </span><span style='background: #F0ADAD'>Data.parse(
+</span>49 <span style=''></span><span style='background: #F0ADAD'>      Source
+</span>50 <span style=''></span><span style='background: #F0ADAD'>        .fromFile(path)
+</span>51 <span style=''></span><span style='background: #F0ADAD'>        .getLines()
+</span>52 <span style=''></span><span style='background: #F0ADAD'>        .toVector
+</span>53 <span style=''></span><span style='background: #F0ADAD'>    )</span><span style=''>
+</span>54 <span style=''>}
+</span></pre>
+          </div>
+          <div class="tab-pane" id="statementlist">
+            <table cellspacing="0" cellpadding="0" class="table statementlist">
+      <tr>
+        <th>Line</th>
+        <th>Stmt Id</th>
+        <th>Pos</th>
+        <th>Tree</th>
+        <th>Symbol</th>
+        <th>Tests</th>
+        <th>Code</th>
+      </tr><tr>
+        <td>
+          9
+        </td>
+        <td>
+          44
+        </td>
+        <td>
+          178
+          -
+          193
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.String.split
+        </td>
+        <td>
+          fr.esgi.iabd.data.dataspec
+        </td>
+        <td style="background: #AEF1AE">
+          line.split(&quot;,&quot;)
+        </td>
+      </tr><tr>
+        <td>
+          9
+        </td>
+        <td>
+          45
+        </td>
+        <td>
+          178
+          -
+          199
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.SeqLike.toSeq
+        </td>
+        <td>
+          fr.esgi.iabd.data.dataspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.refArrayOps[String](line.split(&quot;,&quot;)).toSeq
+        </td>
+      </tr><tr>
+        <td>
+          10
+        </td>
+        <td>
+          50
+        </td>
+        <td>
+          204
+          -
+          258
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          fr.esgi.iabd.data.Row.apply
+        </td>
+        <td>
+          fr.esgi.iabd.data.dataspec
+        </td>
+        <td style="background: #AEF1AE">
+          Row.apply(parsedLine.apply(0), parsedLine.apply(1), scala.Predef.augmentString(parsedLine.apply(2)).toInt)
+        </td>
+      </tr><tr>
+        <td>
+          10
+        </td>
+        <td>
+          47
+        </td>
+        <td>
+          223
+          -
+          236
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.SeqLike.apply
+        </td>
+        <td>
+          fr.esgi.iabd.data.dataspec
+        </td>
+        <td style="background: #AEF1AE">
+          parsedLine.apply(1)
+        </td>
+      </tr><tr>
+        <td>
+          10
+        </td>
+        <td>
+          46
+        </td>
+        <td>
+          208
+          -
+          221
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.SeqLike.apply
+        </td>
+        <td>
+          fr.esgi.iabd.data.dataspec
+        </td>
+        <td style="background: #AEF1AE">
+          parsedLine.apply(0)
+        </td>
+      </tr><tr>
+        <td>
+          10
+        </td>
+        <td>
+          49
+        </td>
+        <td>
+          238
+          -
+          257
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.immutable.StringLike.toInt
+        </td>
+        <td>
+          fr.esgi.iabd.data.dataspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Predef.augmentString(parsedLine.apply(2)).toInt
+        </td>
+      </tr><tr>
+        <td>
+          10
+        </td>
+        <td>
+          48
+        </td>
+        <td>
+          238
+          -
+          251
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.SeqLike.apply
+        </td>
+        <td>
+          fr.esgi.iabd.data.dataspec
+        </td>
+        <td style="background: #AEF1AE">
+          parsedLine.apply(2)
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          52
+        </td>
+        <td>
+          408
+          -
+          438
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.TraversableOnce.count
+        </td>
+        <td>
+          fr.esgi.iabd.data.dataspec
+        </td>
+        <td style="background: #AEF1AE">
+          Data.this.data.count(((x$1: fr.esgi.iabd.data.Row) =&gt; x$1.gender.==(gender)))
+        </td>
+      </tr><tr>
+        <td>
+          19
+        </td>
+        <td>
+          51
+        </td>
+        <td>
+          419
+          -
+          437
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.Object.==
+        </td>
+        <td>
+          fr.esgi.iabd.data.dataspec
+        </td>
+        <td style="background: #AEF1AE">
+          x$1.gender.==(gender)
+        </td>
+      </tr><tr>
+        <td>
+          20
+        </td>
+        <td>
+          53
+        </td>
+        <td>
+          466
+          -
+          475
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.SeqLike.size
+        </td>
+        <td>
+          fr.esgi.iabd.data.dataspec
+        </td>
+        <td style="background: #AEF1AE">
+          Data.this.data.size
+        </td>
+      </tr><tr>
+        <td>
+          27
+        </td>
+        <td>
+          55
+        </td>
+        <td>
+          614
+          -
+          654
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.collection.TraversableLike.filter
+        </td>
+        <td>
+          fr.esgi.iabd.data.dataspec
+        </td>
+        <td style="background: #AEF1AE">
+          Data.this.data.filter(((row: fr.esgi.iabd.data.Row) =&gt; row.gender.==(gender)))
+        </td>
+      </tr><tr>
+        <td>
+          27
+        </td>
+        <td>
+          54
+        </td>
+        <td>
+          633
+          -
+          653
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          java.lang.Object.==
+        </td>
+        <td>
+          fr.esgi.iabd.data.dataspec
+        </td>
+        <td style="background: #AEF1AE">
+          row.gender.==(gender)
+        </td>
+      </tr><tr>
+        <td>
+          28
+        </td>
+        <td>
+          56
+        </td>
+        <td>
+          682
+          -
+          686
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          fr.esgi.iabd.data.Data.data
+        </td>
+        <td>
+          fr.esgi.iabd.data.dataspec
+        </td>
+        <td style="background: #AEF1AE">
+          Data.this.data
+        </td>
+      </tr><tr>
+        <td>
+          30
+        </td>
+        <td>
+          59
+        </td>
+        <td>
+          716
+          -
+          720
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scala.None
+        </td>
+        <td>
+          fr.esgi.iabd.data.dataspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.None
+        </td>
+      </tr><tr>
+        <td>
+          30
+        </td>
+        <td>
+          58
+        </td>
+        <td>
+          716
+          -
+          720
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.None
+        </td>
+        <td>
+          fr.esgi.iabd.data.dataspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.None
+        </td>
+      </tr><tr>
+        <td>
+          30
+        </td>
+        <td>
+          57
+        </td>
+        <td>
+          701
+          -
+          714
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.SeqLike.isEmpty
+        </td>
+        <td>
+          fr.esgi.iabd.data.dataspec
+        </td>
+        <td style="background: #AEF1AE">
+          users.isEmpty
+        </td>
+      </tr><tr>
+        <td>
+          32
+        </td>
+        <td>
+          65
+        </td>
+        <td>
+          736
+          -
+          832
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Some.apply
+        </td>
+        <td>
+          fr.esgi.iabd.data.dataspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Some.apply[Double](users.map[Int, scala.collection.immutable.Vector[Int]](((row: fr.esgi.iabd.data.Row) =&gt; row.age))(immutable.this.Vector.canBuildFrom[Int]).reduce[Int](((x$2: Int, x$3: Int) =&gt; x$2.+(x$3)))./(users.size).toDouble)
+        </td>
+      </tr><tr>
+        <td>
+          32
+        </td>
+        <td>
+          66
+        </td>
+        <td>
+          736
+          -
+          832
+        </td>
+        <td>
+          Block
+        </td>
+        <td>
+          scala.Some.apply
+        </td>
+        <td>
+          fr.esgi.iabd.data.dataspec
+        </td>
+        <td style="background: #AEF1AE">
+          scala.Some.apply[Double](users.map[Int, scala.collection.immutable.Vector[Int]](((row: fr.esgi.iabd.data.Row) =&gt; row.age))(immutable.this.Vector.canBuildFrom[Int]).reduce[Int](((x$2: Int, x$3: Int) =&gt; x$2.+(x$3)))./(users.size).toDouble)
+        </td>
+      </tr><tr>
+        <td>
+          34
+        </td>
+        <td>
+          61
+        </td>
+        <td>
+          770
+          -
+          770
+        </td>
+        <td>
+          TypeApply
+        </td>
+        <td>
+          scala.collection.immutable.Vector.canBuildFrom
+        </td>
+        <td>
+          fr.esgi.iabd.data.dataspec
+        </td>
+        <td style="background: #AEF1AE">
+          immutable.this.Vector.canBuildFrom[Int]
+        </td>
+      </tr><tr>
+        <td>
+          34
+        </td>
+        <td>
+          60
+        </td>
+        <td>
+          778
+          -
+          785
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          fr.esgi.iabd.data.Row.age
+        </td>
+        <td>
+          fr.esgi.iabd.data.dataspec
+        </td>
+        <td style="background: #AEF1AE">
+          row.age
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          62
+        </td>
+        <td>
+          805
+          -
+          810
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          scala.Int.+
+        </td>
+        <td>
+          fr.esgi.iabd.data.dataspec
+        </td>
+        <td style="background: #AEF1AE">
+          x$2.+(x$3)
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          64
+        </td>
+        <td>
+          750
+          -
+          824
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.Int.toDouble
+        </td>
+        <td>
+          fr.esgi.iabd.data.dataspec
+        </td>
+        <td style="background: #AEF1AE">
+          users.map[Int, scala.collection.immutable.Vector[Int]](((row: fr.esgi.iabd.data.Row) =&gt; row.age))(immutable.this.Vector.canBuildFrom[Int]).reduce[Int](((x$2: Int, x$3: Int) =&gt; x$2.+(x$3)))./(users.size).toDouble
+        </td>
+      </tr><tr>
+        <td>
+          35
+        </td>
+        <td>
+          63
+        </td>
+        <td>
+          814
+          -
+          824
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.SeqLike.size
+        </td>
+        <td>
+          fr.esgi.iabd.data.dataspec
+        </td>
+        <td style="background: #AEF1AE">
+          users.size
+        </td>
+      </tr><tr>
+        <td>
+          42
+        </td>
+        <td>
+          70
+        </td>
+        <td>
+          903
+          -
+          941
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          fr.esgi.iabd.data.Data.apply
+        </td>
+        <td>
+          fr.esgi.iabd.data.dataspec
+        </td>
+        <td style="background: #AEF1AE">
+          Data.apply(lines.map[fr.esgi.iabd.data.Row, Vector[fr.esgi.iabd.data.Row]]({
+  ((line: String) =&gt; Row.parse(line))
+})(immutable.this.Vector.canBuildFrom[fr.esgi.iabd.data.Row]))
+        </td>
+      </tr><tr>
+        <td>
+          43
+        </td>
+        <td>
+          68
+        </td>
+        <td>
+          924
+          -
+          924
+        </td>
+        <td>
+          TypeApply
+        </td>
+        <td>
+          scala.collection.immutable.Vector.canBuildFrom
+        </td>
+        <td>
+          fr.esgi.iabd.data.dataspec
+        </td>
+        <td style="background: #AEF1AE">
+          immutable.this.Vector.canBuildFrom[fr.esgi.iabd.data.Row]
+        </td>
+      </tr><tr>
+        <td>
+          43
+        </td>
+        <td>
+          67
+        </td>
+        <td>
+          925
+          -
+          934
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          fr.esgi.iabd.data.Row.parse
+        </td>
+        <td>
+          fr.esgi.iabd.data.dataspec
+        </td>
+        <td style="background: #AEF1AE">
+          Row.parse(line)
+        </td>
+      </tr><tr>
+        <td>
+          43
+        </td>
+        <td>
+          69
+        </td>
+        <td>
+          915
+          -
+          935
+        </td>
+        <td>
+          ApplyToImplicitArgs
+        </td>
+        <td>
+          scala.collection.TraversableLike.map
+        </td>
+        <td>
+          fr.esgi.iabd.data.dataspec
+        </td>
+        <td style="background: #AEF1AE">
+          lines.map[fr.esgi.iabd.data.Row, Vector[fr.esgi.iabd.data.Row]]({
+  ((line: String) =&gt; Row.parse(line))
+})(immutable.this.Vector.canBuildFrom[fr.esgi.iabd.data.Row])
+        </td>
+      </tr><tr>
+        <td>
+          48
+        </td>
+        <td>
+          72
+        </td>
+        <td>
+          984
+          -
+          1076
+        </td>
+        <td>
+          Apply
+        </td>
+        <td>
+          fr.esgi.iabd.data.Data.parse
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #F0ADAD">
+          Data.parse(scala.io.Source.fromFile(path)(io.this.Codec.fallbackSystemCodec).getLines().toVector)
+        </td>
+      </tr><tr>
+        <td>
+          52
+        </td>
+        <td>
+          71
+        </td>
+        <td>
+          1002
+          -
+          1070
+        </td>
+        <td>
+          Select
+        </td>
+        <td>
+          scala.collection.TraversableOnce.toVector
+        </td>
+        <td>
+          
+        </td>
+        <td style="background: #F0ADAD">
+          scala.io.Source.fromFile(path)(io.this.Codec.fallbackSystemCodec).getLines().toVector
+        </td>
+      </tr>
+    </table>
+          </div>
+        </div>
+      </body>
+    </html>

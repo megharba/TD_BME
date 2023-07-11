@@ -1,0 +1,18 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(run, Some(3a3a5f76-d5e6-4548-b803-fc04acd5865d), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / run[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 3 Scala sources to C:\td_a_rendre\target\scala-2.12\classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mNon-compiled module 'compiler-bridge_2.12' for Scala 2.12.15. Compiling...[0m
+[0m[[0m[0minfo[0m] [0m[0m  Compilation completed in 11.513s.[0m
+[0m[[0m[31merror[0m] [0m[0mC:\td_a_rendre\src\main\scala\ArgumentParser.scala:18:9: value opt is not a member of scopt.OParser[String,fr.esgi.iabd.data.Arguments][0m
+[0m[[0m[31merror[0m] [0m[0mpossible cause: maybe a semicolon is missing before `value opt'?[0m
+[0m[[0m[31merror[0m] [0m[0m        opt [String] ('g', "gender")[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\td_a_rendre\src\main\scala\ArgumentParser.scala:19:12: value text is not a member of (Char, String)[0m
+[0m[[0m[31merror[0m] [0m[0mpossible cause: maybe a semicolon is missing before `value text'?[0m
+[0m[[0m[31merror[0m] [0m[0m          .text("Gender used to filter data")[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 14 s, completed 11 juil. 2023 à 12:25:18[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
