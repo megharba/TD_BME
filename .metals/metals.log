@@ -300,3 +300,71 @@ INFO: Schema "PUBLIC" is up to date. No migration necessary.
 2023.07.11 16:08:01 INFO  Connected to Build server: Bloop v1.5.6
 2023.07.11 16:08:02 INFO  time: Imported build in 0.47s
 2023.07.11 16:08:07 INFO  time: indexed workspace in 5.06s
+2023.07.11 16:12:40 INFO  Started: Metals version 0.11.12 in workspace 'C:\TD_BME' for client Visual Studio Code 1.80.0.
+juil. 11, 2023 4:12:40 PM org.flywaydb.core.internal.license.VersionPrinter printVersionOnly
+INFO: Flyway Community Edition 9.16.3 by Redgate
+juil. 11, 2023 4:12:40 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: See release notes here: https://rd.gt/416ObMi
+juil. 11, 2023 4:12:40 PM org.flywaydb.core.internal.license.VersionPrinter printVersion
+INFO: 
+juil. 11, 2023 4:12:44 PM org.flywaydb.core.internal.database.base.BaseDatabaseType createDatabase
+INFO: Database: jdbc:h2:file:C:\TD_BME\.metals\metals (H2 2.1)
+juil. 11, 2023 4:12:44 PM org.flywaydb.core.internal.command.DbValidate validate
+INFO: Successfully validated 4 migrations (execution time 00:00.028s)
+juil. 11, 2023 4:12:44 PM org.flywaydb.core.internal.command.DbMigrate migrateGroup
+INFO: Current version of schema "PUBLIC": 4
+juil. 11, 2023 4:12:44 PM org.flywaydb.core.internal.command.DbMigrate logSummary
+INFO: Schema "PUBLIC" is up to date. No migration necessary.
+2023.07.11 16:12:44 INFO  time: initialize in 4.09s
+2023.07.11 16:12:46 INFO  Attempting to connect to the build server...
+2023.07.11 16:12:46 INFO  Bloop uses C:\Program Files\Java\jdk-11.0.17 defined at C:\Users\Bruno Megharba\.bloop\bloop.json
+2023.07.11 16:12:51 INFO  running 'C:\Program Files\Java\jdk-11.0.17\bin\java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -jar C:\Users\BRUNOM~1\AppData\Local\Temp\metals3963825092996332788\sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2023.07.11 16:12:52 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\TD_BME\.metals\bsp.trace.json or C:\Users\Bruno Megharba\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2023.07.11 16:12:52 INFO  Attempting to connect to the build server...
+2023.07.11 16:12:52 INFO  Bloop uses C:\Program Files\Java\jdk-11.0.17 defined at C:\Users\Bruno Megharba\.bloop\bloop.json
+2023.07.11 16:12:52 INFO  Attempting to connect to the build server...
+2023.07.11 16:12:52 INFO  Bloop uses C:\Program Files\Java\jdk-11.0.17 defined at C:\Users\Bruno Megharba\.bloop\bloop.json
+2023.07.11 16:12:53 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\TD_BME\project\.metals\bsp.trace.json or C:\Users\Bruno Megharba\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2023.07.11 16:12:53 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\TD_BME\project\project\.metals\bsp.trace.json or C:\Users\Bruno Megharba\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2023.07.11 16:12:53 INFO  time: Connected to build server in 6.81s
+2023.07.11 16:12:53 INFO  Connected to Build server: Bloop v1.5.6
+2023.07.11 16:12:54 INFO  time: Imported build in 0.77s
+2023.07.11 16:12:54 INFO  [info] welcome to sbt 1.8.2 (Oracle Corporation Java 11.0.17)
+2023.07.11 16:12:57 INFO  [info] loading settings for project td_bme-build-build-build from metals.sbt ...
+2023.07.11 16:12:57 INFO  [info] loading project definition from C:\TD_BME\project\project\project
+2023.07.11 16:13:01 INFO  [info] loading settings for project td_bme-build-build from metals.sbt ...
+2023.07.11 16:13:01 INFO  [info] loading project definition from C:\TD_BME\project\project
+2023.07.11 16:13:02 INFO  time: indexed workspace in 8.69s
+2023.07.11 16:13:04 INFO  [success] Generated .bloop\td_bme-build-build.json
+2023.07.11 16:13:04 INFO  [warn] Removed stale C:\TD_BME\project\project\.bloop\td_a_rendre-build-build.json
+2023.07.11 16:13:04 INFO  [success] Total time: 3 s, completed 11 juil. 2023 à 16:13:05
+2023.07.11 16:13:06 INFO  [info] loading settings for project td_bme-build from metals.sbt,plugins.sbt ...
+2023.07.11 16:13:06 INFO  [info] loading project definition from C:\TD_BME\project
+2023.07.11 16:13:08 INFO  [success] Generated .bloop\td_bme-build.json
+2023.07.11 16:13:08 INFO  [warn] Removed stale C:\TD_BME\project\.bloop\td_a_rendre-build.json
+2023.07.11 16:13:08 INFO  [success] Total time: 2 s, completed 11 juil. 2023 à 16:13:08
+2023.07.11 16:13:10 INFO  [info] loading settings for project td_bme from build.sbt ...
+2023.07.11 16:13:10 INFO  [info] set current project to td_bme (in build file:/C:/TD_BME/)
+2023.07.11 16:13:10 INFO  [success] Generated .bloop\td_bme-test.json
+2023.07.11 16:13:10 INFO  [success] Generated .bloop\td_bme.json
+2023.07.11 16:13:10 INFO  [warn] Removed stale C:\TD_BME\.bloop\td_a_rendre-test.json
+2023.07.11 16:13:10 INFO  [warn] Removed stale C:\TD_BME\.bloop\td_a_rendre.json
+2023.07.11 16:13:10 INFO  [success] Total time: 1 s, completed 11 juil. 2023 à 16:13:11
+2023.07.11 16:13:11 INFO  time: ran 'sbt bloopInstall' in 19s
+2023.07.11 16:13:11 INFO  Disconnecting from Bloop session...
+2023.07.11 16:13:11 INFO  Shut down connection with build server.
+2023.07.11 16:13:11 INFO  Shut down connection with build server.
+2023.07.11 16:13:11 INFO  Shut down connection with build server.
+2023.07.11 16:13:11 INFO  Attempting to connect to the build server...
+2023.07.11 16:13:11 INFO  Bloop uses C:\Program Files\Java\jdk-11.0.17 defined at C:\Users\Bruno Megharba\.bloop\bloop.json
+2023.07.11 16:13:11 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\TD_BME\.metals\bsp.trace.json or C:\Users\Bruno Megharba\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2023.07.11 16:13:11 INFO  Attempting to connect to the build server...
+2023.07.11 16:13:11 INFO  Bloop uses C:\Program Files\Java\jdk-11.0.17 defined at C:\Users\Bruno Megharba\.bloop\bloop.json
+2023.07.11 16:13:11 INFO  Attempting to connect to the build server...
+2023.07.11 16:13:11 INFO  Bloop uses C:\Program Files\Java\jdk-11.0.17 defined at C:\Users\Bruno Megharba\.bloop\bloop.json
+2023.07.11 16:13:11 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\TD_BME\project\project\.metals\bsp.trace.json or C:\Users\Bruno Megharba\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2023.07.11 16:13:11 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at C:\TD_BME\project\.metals\bsp.trace.json or C:\Users\Bruno Megharba\AppData\Local\scalameta\metals\cache\bsp.trace.json
+2023.07.11 16:13:11 INFO  time: Connected to build server in 0.4s
+2023.07.11 16:13:11 INFO  Connected to Build server: Bloop v1.5.6
+2023.07.11 16:13:11 INFO  time: Imported build in 0.4s
+2023.07.11 16:13:17 INFO  time: indexed workspace in 4.89s
